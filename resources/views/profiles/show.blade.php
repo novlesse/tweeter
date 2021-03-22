@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<x-app>
     <header class="mb-6 relative">
         {{-- <img
             src="/images/"
@@ -37,4 +35,4 @@
     @include('partials._timeline', [
         'tweets' => $user->tweets
     ])
-@endsection
+</x-app>

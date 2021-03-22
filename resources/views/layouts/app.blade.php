@@ -19,15 +19,29 @@
     <div id="app">
         <section class="px-8 py-4 mb-6">
             <header class="container mx-auto">
-                <h1 class="tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-red-300 text-3xl">
+                <a 
+                    href="{{ route('home') }}"
+                    class="tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-red-300 text-3xl">
                     Tweeter
-                </h1>
+                </a>
             </header>
         </section>
 
-        <section class="px-8">
+        <section class="px-8 pb-8">
             <main class="container mx-auto">
-                @yield('content')
+                <div class="lg:flex lg:justify-between">
+                    <div class="lg:w-1/6">
+                        @include('_sidebar-links')
+                    </div>
+                    
+                    <div class="lg:flex-1 lg:mx-10">
+                        @yield('content')
+                    </div>
+
+                    <div class="lg:w-1/6 bg-blue-100 rounded-lg p-4">
+                        @include('_friends-list')
+                    </div>
+                </div>
             </main>
         </section>
     </div>

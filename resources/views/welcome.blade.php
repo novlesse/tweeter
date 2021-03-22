@@ -17,7 +17,7 @@
                 @if (Route::has('login'))
                     <div class="flex justify-around">
                         @auth
-                            <a href="{{ url('/home') }}" class="text-sm text-gray-500 hover:text-gray-300 hover:underline">Home</a>
+                            <a href="{{ url('/tweets') }}" class="text-sm text-gray-500 hover:text-gray-300 hover:underline">Home</a>
                         @else
                             <a href="{{ route('login') }}" class="text-sm text-gray-500 hover:text-gray-300 hover:underline">Log in</a>
     

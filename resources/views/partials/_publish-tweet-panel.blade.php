@@ -1,13 +1,13 @@
-<div class="border border-blue-400 rounded-lg py-6 px-8 mb-8">
+<div class="border border-blue-400 rounded-lg py-6 px-6 mb-6">
     <form method="POST" action="/tweets">
         @csrf
         <textarea
             name="body"
             class="w-full outline-none"
-            placeholder="Hello world."
+            placeholder="Type something here"
         ></textarea>
 
-        <hr class="my-4" />
+        <hr class="mb-4" />
 
         <footer class="flex justify-between">
             <img
@@ -19,9 +19,9 @@
             /> 
             <button
                 type="submit"
-                class="bg-blue-400 rounded-lg shadow p-2 text-white"
+                class="bg-blue-400 rounded-lg shadow px-4 text-white"
             >
-                Tweeter
+                Submit
             </button>
         </footer>
     </form>

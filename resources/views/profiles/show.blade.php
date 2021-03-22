@@ -2,21 +2,23 @@
 
 @section('content')
     <header class="mb-6 relative">
-        <img
-            src=""
-            alt=""
+        {{-- <img
+            src="/images/"
+            alt="banner"
             class="mb-2"
-        />
+        /> --}}
+        
+        <div class="bg-gradient-to-r from-blue-300 to-red-200 rounded-lg" style="height: 240px"></div>
 
-        <div class="flex justify-between items-center mb-4">
+        <div class="flex justify-between items-center my-4">
             <div>
                 <h2 class="font-bold text-2xl">{{ $user->name }}</h2>
-                <p>Joined {{ $user->created_at->diffForHumans() }}</p>
+                <p class="text-gray-400">Joined {{ $user->created_at->diffForHumans() }}</p>
             </div>
 
-            <div>
-                <a href="" class="rounded-full border-gray-300 p-2 text-black text-xs">Edit Profile</a>
-                <a href="" class="bg-blue-400 rounded-full shadow p-2 text-white text-xs">Follow Me</a>
+            <div class="mb-4">
+                <a href="" class="rounded-full border border-gray-300 py-2 px-4 text-black text-xs hover:bg-gray-100">Edit Profile</a>
+                <a href="" class="bg-blue-400 rounded-full shadow py-2 px-4 text-white text-xs hover:bg-blue-300">Follow Me</a>
             </div>
         </div>
 
@@ -25,10 +27,10 @@
         </p>
 
         <img
-            src="{{ $user->avatar }}"
+            src="{{ $user->avatar }}"1
             alt=""
-            class="rounded-full mr-2 absolute"
-            style="width: 150px; left: calc(50% - 75px); top: 138px"
+            class="rounded-full mr-2 absolute border border-gray-300"
+            style="width: 150px; left: calc(50% - 75px); top: 43%"
         />
     </header>
 

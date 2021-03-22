@@ -1,6 +1,6 @@
-<h3 class="font-bold text-xl mb-4">Following</h3>
+<h3 class="font-bold text-xl mb-4 p-2">Following</h3>
 
-<ul>
+<ul class="px-2">
     @foreach (auth()->user()->follows as $user)    
     <li class="my-3">
         <div>

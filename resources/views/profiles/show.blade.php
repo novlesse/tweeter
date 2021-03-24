@@ -14,9 +14,10 @@
                 <p class="text-gray-400">Joined {{ $user->created_at->diffForHumans() }}</p>
             </div>
 
-            <div class="mb-4">
+            <div class="flex mb-4">
                 <a href="" class="rounded-full border border-gray-300 py-2 px-4 text-black text-xs hover:bg-gray-100">Edit Profile</a>
-                <a href="" class="bg-blue-400 rounded-full shadow py-2 px-4 text-white text-xs hover:bg-blue-300">Follow Me</a>
+                
+                <x-follow-button :user="$user"/>
             </div>
         </div>
 

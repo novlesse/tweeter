@@ -1,9 +1,10 @@
+@if (current_user()->isNot($user))
 <form method="POST" action="/profiles/{{ $user->name }}/follow">
-    @csrf
-    
+    @csrf   
     <button 
         type="submit" 
         class="bg-blue-400 rounded-full shadow py-2 px-4 text-white text-xs ml-2 hover:bg-blue-300">
-        {{ auth()->user()->following($user) ? 'Unfollow' : 'Follow' }}
+        {{ current_user()->following($user) ? 'Unfollow' : 'Follow' }}
     </button>
 </form>
+@endif

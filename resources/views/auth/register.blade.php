@@ -4,6 +4,17 @@
         <form method="POST" action="{{ route('register') }}" class="p-10">
             @csrf
             <div class="block">
+                <label for="username" class="text-gray-500 text-sm">{{ __('Username') }}</label>
+                <div class="mb-4 mt-1">
+                    <input id="username" type="text" class="form-input mt-1 block w-full rounded py-2 px-4 border @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
+                    @error('username')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+            </div>
+            <div class="block">
                 <label for="name" class="text-gray-500 text-sm">{{ __('Name') }}</label>
                 <div class="mb-4 mt-1">
                     <input id="name" type="text" class="form-input mt-1 block w-full rounded py-2 px-4 border @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>

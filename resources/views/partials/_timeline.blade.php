@@ -6,6 +6,6 @@
     @empty
     <div>
         <hr class="my-4" />
-        <p class="text-gray-400 text-sm">{{ $user->name }} currently has no chirps.</p>
+        <p class="text-gray-400 text-sm">There are currently has no chirps.</p>
     </div>
 @endforelse

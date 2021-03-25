@@ -13,15 +13,13 @@
             <img
                 src="{{ auth()->user()->avatar }}"
                 alt="avatar"
-                class="rounded-full mr-2"
-                width="50"
-                height="50"
+                class="rounded-full h-12 w-12 mr-2"
             /> 
             <button
                 type="submit"
-                class="bg-blue-400 rounded-lg shadow px-4 text-white"
+                class="bg-blue-400 rounded-3xl shadow px-6 text-white shadow-sm focus:outline-none "
             >
-                Submit
+                Publish
             </button>
         </footer>
     </form>

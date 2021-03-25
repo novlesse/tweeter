@@ -8,7 +8,7 @@
         <div class="relative">
             <div class="bg-gradient-to-r from-blue-300 to-red-200 rounded-lg" style="height: 240px"></div>
             <img
-                src="{{ $user->avatar }}"1
+                src="{{ $user->avatar }}"
                 alt=""
                 class="rounded-full h-36 w-36 mr-2 absolute border border-gray-300 bottom-0 transform -translate-x-1/2 translate-y-1/2"
                 style="left: 50%"

@@ -48,6 +48,11 @@ class User extends Authenticatable
         return asset($value);
     }
 
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
+    }
+
     public function timeline()
     {
         $friends = $this->follows()->pluck('id');

@@ -1,4 +1,4 @@
-<div class="border border-blue-400 rounded-lg py-6 px-6 mb-6">
+<div class="border-2 border-blue-400 bg-white rounded-lg py-6 px-6 mb-6">
     <form method="POST" action="/tweets">
         @csrf
         <textarea
@@ -17,7 +17,7 @@
             /> 
             <button
                 type="submit"
-                class="bg-blue-400 rounded-3xl shadow px-6 text-white shadow-sm focus:outline-none "
+                class="bg-blue-400 rounded-3xl shadow px-6 text-white shadow-sm focus:outline-none hover:bg-opacity-50"
             >
                 Publish
             </button>

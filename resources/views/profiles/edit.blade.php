@@ -124,7 +124,7 @@
 
         <div class="flex flex-row-reverse mb-6">
             <button type="submit"
-                class="bg-blue-300 text-white rounded py-2 px-4 hover:bg-blue-200"
+                class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-opacity-50"
                 >
                 Submit
             </button>

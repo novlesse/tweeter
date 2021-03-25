@@ -13,7 +13,8 @@
                 </div>
 
                 @if (auth()->check())
-                <div class="lg:w-1/6 bg-blue-50 rounded-lg p-4">
+
+                <div class="lg:w-1/6 overflow-y-scroll h-auto">
                     @include('_friends-list')
                 </div>
                 @endif

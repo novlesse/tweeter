@@ -16,9 +16,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="antialiased">
-    <div id="app">
-        <section class="px-8 py-6 mb-4">
-            <header class="flex justify-between container mx-auto ">
+    <div id="app" class="bg-gray-100">
+        <section class="px-8 py-3 bg-white fixed top-0 w-full border-b border-gray-300 shadow z-10">
+            <header class="flex justify-between container mx-auto">
                 <a 
                     href="{{ route('home') }}"
                     class="tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-red-300 text-3xl">
@@ -35,7 +35,7 @@
                             <a class="text-sm text-gray-500 hover:text-gray-300 hover:underline ml-4" href="{{ route('register') }}">{{ __('Register') }}</a>           
                         @endif
                     @else
-                            <p>
+                            <p class="font-semibold">
                                 {{ Auth::user()->email }}
                             </p>
 
@@ -54,7 +54,9 @@
                 </div>
             </header>
         </section>
-      {{ $slot }}
+        <div class="pt-24">
+            {{ $slot }}
+        </div>
     </div>
 </body>
 </html>

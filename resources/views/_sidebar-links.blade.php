@@ -1,4 +1,4 @@
-<ul>
+<ul class="fixed">
     <li><a
             class="font-medium text-lg mb-4 block"
             href="{{ route('home') }}"

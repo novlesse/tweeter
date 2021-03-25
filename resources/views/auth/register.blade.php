@@ -57,7 +57,7 @@
             <hr class="my-6"/>
 
             <div class="flex flex-row-reverse">
-                <button type="submit" class="rounded-md bg-blue-400 text-white py-2 px-4 mr-2 hover:bg-blue-300">
+                <button type="submit" class="rounded-md bg-blue-400 text-white py-2 px-4 mr-2 hover:bg-opacity-50">
                     {{ __('Submit') }}
                 </button>
             </div>

@@ -6,6 +6,7 @@
                 class="mb-2"
             /> --}}
             <div class="relative">
+                {{-- TEMP BANNER --}}
                 <div class="bg-gradient-to-r from-blue-300 to-red-200 rounded-xl" style="height: 240px"></div>
                 <img
                     src="{{ $user->avatar }}"
@@ -16,9 +17,14 @@
             </div>
 
             <div class="flex justify-between items-center mt-2 mb-6">
-                <div style="max-width: 270px">
+                <div class="max-w-md">
                     <h2 class="font-bold text-3xl mt-2">{{ $user->name }}</h2>
                     <p class="text-gray-400">Joined {{ $user->created_at->diffForHumans() }}</p>
+                    <div class="flex">
+                        <p class="text-sm font-medium">Chrips{{ $user->tweets()->count() }}</p>
+                        <p class="text-sm font-medium mx-1">|</p>
+                        <p class="text-sm font-medium">Following{{ $user->follows()->count() }}</p>
+                    </div>
                 </div>
 
                 <div class="flex">

@@ -35,21 +35,27 @@
                             <a class="text-sm text-gray-500 hover:text-gray-300 hover:underline ml-4" href="{{ route('register') }}">{{ __('Register') }}</a>           
                         @endif
                     @else
+
+                    <div class="flex">
+                        <img
+                            src="{{ Auth::user()->avatar }}"
+                            alt=""
+                            class="rounded-full border h-12 w-12"
+                        />    
+                        <div class="text-right ml-3">
                             <p class="font-semibold">
                                 {{ Auth::user()->email }}
                             </p>
-
-                            <div class="text-right text-sm text-gray-500 hover:text-gray-300 hover:underline">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                 document.getElementById('logout-action').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-action" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
+                            <a class="dropdown-item text-sm text-gray-500 hover:text-gray-300 hover:underline" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                             document.getElementById('logout-action').submit();">
+                                {{ __('Logout') }}
+                            </a>
+                            <form id="logout-action" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </div>
                     @endguest
                 </div>
             </header>

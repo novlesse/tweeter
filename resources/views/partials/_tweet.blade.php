@@ -1,5 +1,5 @@
 <div class="flex p-5 justify-between {{ $loop->last ? '' : 'border-b border-b-gray-300' }}">
-    <div class="flex mr-2 flex-shrink-0">
+    <div class="flex mr-2 flex-shrink-1">
         <a href="{{ route('profile', $tweet->user) }}">
             <img
                 src="{{ $tweet->user->avatar }}"
@@ -8,7 +8,7 @@
             />
         </a>
    
-        <div>
+        <div class="ml-2">
             <h5 class="font-bold mb-2">
                 <a href="{{ route('profile', $tweet->user) }}">
                     {{ $tweet->user->username }}
@@ -19,7 +19,7 @@
             </p> 
         </div>
     </div>
-    <p class="text-sm text-gray-400 ml-10">
+    <p class="text-sm text-gray-400 flex-shrink-0">
         {{ $tweet->created_at->diffForHumans() }}
     </p>
 </div>

@@ -1,5 +1,5 @@
 <x-app>
-    <div class="mx-96 bg-gray-50 rounded-lg border">
+    <div class="mx-96 bg-gray-50 rounded-xl border">
         <h1 class="bg-gray-100 tracking-wide font-medium text-3xl text-gray-500 py-4 px-6 border-b">{{ __('Register') }}</h1>
         <form method="POST" action="{{ route('register') }}" class="p-10">
             @csrf
@@ -57,7 +57,7 @@
             <hr class="my-6"/>
 
             <div class="flex flex-row-reverse">
-                <button type="submit" class="rounded-md bg-blue-400 text-white py-2 px-4 mr-2 hover:bg-opacity-50">
+                <button type="submit" class="bg-blue-400 rounded-3xl shadow px-6 py-3 text-white shadow-sm focus:outline-none hover:bg-opacity-50">
                     {{ __('Submit') }}
                 </button>
             </div>

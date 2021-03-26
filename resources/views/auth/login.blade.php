@@ -1,5 +1,5 @@
 <x-app>
-    <div class="mx-96 bg-gray-50 rounded-lg border">
+    <div class="mx-96 bg-gray-50 rounded-xl border">
         <h1 class="bg-gray-100 tracking-wide font-medium text-3xl text-gray-500 py-4 px-6 border-b">{{ __('Login') }}</h1>
         <form method="POST" action="{{ route('login') }}" class="p-10">
             @csrf
@@ -35,11 +35,11 @@
             <hr class="my-6"/>
 
             <div class="flex flex-row-reverse items-center">
-                <button type="submit" class="rounded-md bg-blue-400 text-white py-2 px-4 ml-4 hover:bg-opacity-50">
+                <button type="submit" class="bg-blue-400 rounded-3xl shadow px-6 py-3 text-white shadow-sm ml-4 focus:outline-none hover:bg-opacity-50">
                     {{ __('Login') }}
                 </button>
                 @if (Route::has('password.request'))
-                    <a class="text-red-300 text-sm ml-2 hover:text-red-200" href="{{ route('password.request') }}">
+                    <a class="text-gray-500 hover:text-red-400" href="{{ route('password.request') }}">
                         {{ __('Forgot Your Password?') }}
                     </a>
                 @endif

@@ -16,7 +16,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="antialiased">
-    <div id="app" class="bg-gray-100">
+    <div id="app">
         <section class="px-8 py-3 bg-white fixed top-0 w-full border-b border-gray-300 shadow z-10">
             <header class="flex justify-between container mx-auto">
                 <a 

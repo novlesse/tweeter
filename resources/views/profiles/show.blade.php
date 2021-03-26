@@ -1,5 +1,4 @@
 <x-app>
-    <div class="h-screen">
         <header class="mb-8 relative">
             {{-- <img
                 src="/images/"
@@ -7,7 +6,7 @@
                 class="mb-2"
             /> --}}
             <div class="relative">
-                <div class="bg-gradient-to-r from-blue-300 to-red-200 rounded-lg" style="height: 240px"></div>
+                <div class="bg-gradient-to-r from-blue-300 to-red-200 rounded-xl" style="height: 240px"></div>
                 <img
                     src="{{ $user->avatar }}"
                     alt=""
@@ -17,14 +16,14 @@
             </div>
 
             <div class="flex justify-between items-center mt-2 mb-6">
-                <div>
+                <div style="max-width: 270px">
                     <h2 class="font-bold text-3xl mt-2">{{ $user->name }}</h2>
                     <p class="text-gray-400">Joined {{ $user->created_at->diffForHumans() }}</p>
                 </div>
 
                 <div class="flex">
                     @can('edit', $user)
-                        <a href="{{ $user->path('edit') }}" class="rounded-full py-2 px-4 bg-white border border-blue-400 text-blue-400 text-xs hover:bg-opacity-50">Edit Profile</a>
+                        <a href="{{ $user->path('edit') }}" class="rounded-full py-2 px-4 bg-white border border-blue-400 text-blue-400 text-xs hover:bg-blue-400 hover:text-white">Edit Profile</a>
                     @endcan
                     
                     <x-follow-button :user="$user"/>
@@ -37,7 +36,6 @@
         </header>
 
         @include('partials._timeline', [
-            'tweets' => $user->tweets
+            'tweets' => $tweets
         ])
-    </div>
 </x-app>

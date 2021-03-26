@@ -58,13 +58,6 @@
                     >
             </div>
 
-            {{-- <div class="flex justify-center mt-6">
-                <img src="{{ $user->avatar }}"
-                         alt="avatar"
-                         class="rounded-full h-10 w-10"
-                    >
-            </div> --}}
-
             @error('avatar')
                 <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
             @enderror            
@@ -124,10 +117,16 @@
 
         <div class="flex flex-row-reverse mb-6">
             <button type="submit"
-                class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-opacity-50"
+                class="bg-blue-400 rounded-3xl shadow px-6 py-3 text-white shadow-sm focus:outline-none hover:bg-opacity-50"
                 >
                 Submit
             </button>
+
+            <a href="{{ $user->path() }}"
+                class="text-gray-500 mr-2 px-6 py-3 focus:outline-none hover:text-red-400 hover:underline"
+                >
+                Cancel
+            </a>
         </div>
     </form>
 </x-app>

@@ -1,14 +1,15 @@
-<div class="border-2 border-blue-400 bg-white rounded-lg py-6 px-6 mb-6">
+<div class="border-2 border-gray-400 bg-white rounded-xl py-6 px-6 mb-6 hover:border-blue-400">
     <form method="POST" action="/tweets">
         @csrf
         <textarea
             name="body"
             class="w-full outline-none"
             placeholder="Type something here"
+            required
         ></textarea>
 
         <hr class="mb-4" />
-
+        
         <footer class="flex justify-between">
             <img
                 src="{{ auth()->user()->avatar }}"
@@ -17,7 +18,7 @@
             /> 
             <button
                 type="submit"
-                class="bg-blue-400 rounded-3xl shadow px-6 text-white shadow-sm focus:outline-none hover:bg-opacity-50"
+                class="bg-blue-400 rounded-3xl shadow px-6 py-3 text-white shadow-sm focus:outline-none hover:bg-opacity-50"
             >
                 Publish
             </button>

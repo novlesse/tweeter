@@ -45,7 +45,7 @@ class User extends Authenticatable
 
     public function getAvatarAttribute($value)
     {
-        return asset($value);
+        return asset($value ? 'storage/'.$value : 'images/profile.png');
     }
 
     public function setPasswordAttribute($value)
@@ -60,7 +60,7 @@ class User extends Authenticatable
         return Tweet::whereIn('user_id', $friends)
             ->orWhere('user_id', $this->id)
             ->latest()
-            ->get();
+            ->paginate(10);
     }
 
     public function tweets()

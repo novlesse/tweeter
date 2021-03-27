@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tweet;
+use App\Traits\Likeable;
 use Illuminate\Http\Request;
 
 class TweetController extends Controller

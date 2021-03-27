@@ -1,7 +1,7 @@
-<div class="bg-blue-50 rounded-xl py-4 px-8">
-    <h3 class="font-bold text-xl mb-4 p-2">Following</h3>
+<div class="bg-blue-50 rounded-xl p-6">
+    <h3 class="font-bold text-xl mb-4">Following</h3>
     
-    <ul class="px-2">
+    <ul class="text-center">
         @forelse (current_user()->follows as $user)    
         <li class="my-3">
             <div>
@@ -11,12 +11,13 @@
                         alt="avatar"
                         class="rounded-full h-12 w-12 mr-2"
                     />
-                    {{ $user->name }}
+                    {{ $user->username }}
                 </a>
             </div>
         </li>
+        
         @empty
-            <li>Not following anyone.</li>
+        <li>Not following anyone.</li>
         @endforelse
     </ul>
 </div>

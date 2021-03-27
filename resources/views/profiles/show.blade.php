@@ -20,7 +20,7 @@
                 <div class="max-w-md">
                     <h2 class="font-bold text-3xl mt-2">{{ $user->name }}</h2>
                     <p class="text-gray-400">Joined {{ $user->created_at->diffForHumans() }}</p>
-                    <div class="flex">
+                    <div class="flex mt-1">
                         <p class="text-sm font-medium">Chrips {{ $user->tweets()->count() }}</p>
                         <p class="text-sm font-medium mx-1">|</p>
                         <p class="text-sm font-medium">Following {{ $user->follows()->count() }}</p>
@@ -37,7 +37,7 @@
             </div>
 
             <p class="text-sm">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa impedit adipisci harum accusamus ea aut neque tempore atque, placeat tenetur at possimus eos nihil rem dolorum dolor iste esse non?
+                {{ $user->bio ?: 'No biography currently written.' }}
             </p>
         </header>
 

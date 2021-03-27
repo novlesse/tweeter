@@ -29,6 +29,7 @@ class ProfileController extends Controller
         $attributes = request()->validate([
             'username' => ['string', 'required', 'max:255', Rule::unique('users')->ignore($user)],
             'name' => ['string', 'required', 'max:255'],
+            'bio' => ['max:255'],
             'avatar' => ['file'],
             'email' => ['string', 'email', 'required', 'max:255', Rule::unique('users')->ignore($user)],
             'password' => ['string', 'required', 'max:255', 'min:8', 'confirmed']

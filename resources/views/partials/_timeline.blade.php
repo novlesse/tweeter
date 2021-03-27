@@ -1,4 +1,4 @@
-<div class="rounded-xl bg-gray-50 mb-4">
+<div class="rounded-xl bg-gray-50 p-2">
     @forelse($tweets as $tweet)
         @include('partials._tweet')
 
@@ -8,7 +8,7 @@
     </div>
     @endforelse
 
-    <div class="px-6 pb-4">
+    <div class="px-6">
         {{ $tweets->links('pagination::tailwind') }}
     </div>
 </div>

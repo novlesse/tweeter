@@ -1,4 +1,4 @@
-<div class="flex p-5 justify-between {{ $loop->last ? '' : 'border-b border-b-gray-300' }}">
+<div class="flex p-4 justify-between {{ $loop->last ? '' : 'border-b border-b-gray-300' }}">
     <div class="flex mr-2 flex-shrink-1">
         <a href="{{ route('profile', $tweet->user) }}">
             <img

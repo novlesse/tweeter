@@ -64,6 +64,23 @@
         </div>
 
         <div class="mb-6">
+            <label class="block mb-2 uppercase font-bold text-xs text-gray-700" for="bio">
+                Biography
+            </label>
+
+            <textarea class="form-input mt-1 block w-full rounded py-2 px-4 border text-gray-600"
+                type="text"
+                name="bio"
+                id="bio"
+                placeholder={{ $user->bio }}
+            ></textarea>
+
+            @error('bio')
+                <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+            @enderror
+        </div>
+
+        <div class="mb-6">
             <label class="block mb-2 uppercase font-bold text-xs text-gray-700" for="email">
                 Email
             </label>

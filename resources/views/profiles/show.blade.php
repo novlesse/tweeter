@@ -21,9 +21,9 @@
                     <h2 class="font-bold text-3xl mt-2">{{ $user->name }}</h2>
                     <p class="text-gray-400">Joined {{ $user->created_at->diffForHumans() }}</p>
                     <div class="flex">
-                        <p class="text-sm font-medium">Chrips{{ $user->tweets()->count() }}</p>
+                        <p class="text-sm font-medium">Chrips {{ $user->tweets()->count() }}</p>
                         <p class="text-sm font-medium mx-1">|</p>
-                        <p class="text-sm font-medium">Following{{ $user->follows()->count() }}</p>
+                        <p class="text-sm font-medium">Following {{ $user->follows()->count() }}</p>
                     </div>
                 </div>
 

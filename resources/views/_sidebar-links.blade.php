@@ -1,4 +1,4 @@
-<ul class="fixed">
+<ul>
     <li class="hover:text-blue-400">
         <a
             class="font-medium text-lg mb-4 block"
